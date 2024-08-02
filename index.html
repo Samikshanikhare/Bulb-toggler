@@ -30,24 +30,25 @@
         border-radius: 20px;
         font-size: 25px;
         background-color: #F7F4EA;
+        cursor: pointer;
     }
 </style>
 <body>
     <h1 class="heading">Bulb Toggler</h1>
     <img src="off.png" class="bulb" id="bulbinput">
     <div class="btnbody">
-        <button class="btn">ON</button>
-        <button class="btn">OFF</button>
+        <button class="btn" onclick="Bulbtoggle()">Toggle</button>
     </div>
 
     <script>
-        function bulbon{
+        function Bulbtoggle(){
             const bulbelement = document.getElementById("bulbinput");
-            bulbelement.src="off.png";
-        }
-        function bulboff{
-            const bulbelement = document.getElementById("bulbinput");
-            bulbelement.src="on.png";
+            if(bulbelement.src.includes("off.png")){
+                bulbelement.src="on.png"
+            }
+            else{
+                bulbelement.src="off.png"
+            }
         }
        
     </script>
