@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bulb togller</title>
+    <title>bulb toggler</title>
 </head>
+<style>
+    body{
+        background-color: #C0B9DD;
+    }
+    .heading{
+        font-size: 40px;
+        margin: 80px auto;
+        text-align: center;
+    }
+    .bulb{
+        height: 350px;
+        display: block;
+        margin: 10px auto;
+    }
+    .btnbody{
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        width: 100px;
+        height: 40px;
+        margin:30px 70px;
+        border-radius: 20px;
+        font-size: 25px;
+        background-color: #F7F4EA;
+    }
+</style>
 <body>
+    <h1 class="heading">Bulb Toggler</h1>
+    <img src="off.png" class="bulb" id="bulbinput">
+    <div class="btnbody">
+        <button class="btn">ON</button>
+        <button class="btn">OFF</button>
+    </div>
+
+    <script>
+        function bulbon{
+            const bulbelement = document.getElementById("bulbinput");
+            bulbelement.src="off.png";
+        }
+        function bulboff{
+            const bulbelement = document.getElementById("bulbinput");
+            bulbelement.src="on.png";
+        }
+       
+    </script>
+
     
 </body>
 </html>
